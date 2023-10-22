@@ -181,5 +181,12 @@ ENDIF(WIN32)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/")
 
+message(CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE})
+# Convert the build type to uppercase and compare once
+string(TOUPPER "${CMAKE_BUILD_TYPE}" UPPERCASE_CMAKE_BUILD_TYPE)
+if(UPPERCASE_CMAKE_BUILD_TYPE STREQUAL "DEBUG")
+	add_definitions(-D_VALIDATION)
+endif()
+
 add_subdirectory(base)
 add_subdirectory(examples)
