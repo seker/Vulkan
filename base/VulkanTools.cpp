@@ -44,6 +44,7 @@ namespace vks
 			switch (errorCode)
 			{
 #define STR(r) case VK_ ##r: return #r
+				STR(SUCCESS);
 				STR(NOT_READY);
 				STR(TIMEOUT);
 				STR(EVENT_SET);

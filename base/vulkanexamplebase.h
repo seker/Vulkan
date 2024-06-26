@@ -73,6 +73,9 @@
 #include "camera.hpp"
 #include "benchmark.hpp"
 
+#include "micro.h"
+#include "log.h"
+
 class VulkanExampleBase
 {
 private:
